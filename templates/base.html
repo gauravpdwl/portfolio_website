@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/base.css">
+    <title>Gaurav Padwal</title>
+    <style>
+       section{
+           padding: 40px 0;
+       }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container-fluid">
+            <div class="row justify-content-center align-items-end">
+                <a href="{{ url_for('index') }}" class="col display-4 nav-link portfoliotag">
+                    <span class="fw-bold portspantag">
+                        Portfolio
+                    </span>
+                </a>
+                <a href="{{ url_for('projects') }}" class="col navbar-brand nav-link portfoliotag portfoliotag2">
+                    <span class="fw-bold text-secondary">
+                        Projects
+                    </span>
+                </a>
+                <a href="{{ url_for('about') }}" class="col navbar-brand nav-link portfoliotag portfoliotag2">
+                    <span class="fw-bold text-secondary">
+                        About
+                    </span>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <!-- <nav class="navbar navbar-expand-lg navbar-light mynav">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link" href="{{ url_for('index') }}">Home</a>
+            <a class="nav-item nav-link" href="{{ url_for('projects') }}">Projects</a>
+            <a class="nav-item nav-link" href="{{ url_for('about') }}">About</a>
+          </div>
+    </nav> -->
+
+    {% block content %}
+        
+    {% endblock %}  
+
+    <section class="footer">
+        <div class="container-fluid">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-12 text-center">
+                    <p class="fs-4 text fw-bold footer-text">SAY HI TO ME!</p>
+                </div>
+                <div class="col-5">
+                    <nav class="nav justify-content-center">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="https://www.linkedin.com/in/gauravpadwal/"><box-icon type='logo' name='linkedin-square'></box-icon></a>
+                                </div>
+                                <div class="col">
+                                    <a href="#"><box-icon type='logo' name='github'></box-icon></a>
+                                </div>
+                                <div class="col">
+                                    <a href="#"><box-icon name='instagram' type='logo' ></box-icon></a>
+                                </div>
+                            </div>
+                    </nav>
+                </div>
+                <div class="col-12 text-center">
+                    <p class="fw-normal footer-text">padwalgaurav01@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
+</body>
+</html>
